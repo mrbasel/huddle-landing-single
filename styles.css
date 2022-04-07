@@ -1,0 +1,136 @@
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: #fff;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  color: var(--violet);
+  background-color: #fff;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+body {
+  background-color: var(--violet);
+}
+
+header {
+  padding: 1.5rem 1rem;
+}
+
+header .logo {
+  width: 12rem;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.background-wrapper {
+  background: url(images/bg-desktop.svg) no-repeat;
+  height: 100vh;
+  background-position: 25%;
+  background-size: auto 100%;
+}
+
+main {
+  display: flex;
+  gap: 4rem;
+  padding: 3rem 3rem;
+}
+
+main .image-column img {
+  max-width: 820px;
+}
+
+.content-column div {
+  max-width: 500px;
+}
+
+main .cta-button {
+  width: 10rem;
+  /* Generated using https://box-shadow.dev/ */
+  box-shadow: 4px 9px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  min-height: 50px;
+}
+
+footer img {
+  width: 35px;
+  height: 35px;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 0 0.2rem;
+
+  /* Generated using https://codepen.io/sosuke/pen/Pjoqqp */
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(312deg)
+    brightness(106%) contrast(103%);
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  header .logo {
+    width: 10rem;
+  }
+
+  main {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .content-column {
+    margin: 0 auto;
+  }
+
+  .background-wrapper {
+    background: url(images/bg-mobile.svg) no-repeat;
+    background-size: 100%;
+  }
+
+  footer {
+    position: static;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+
+  footer img {
+    width: 30px;
+    height: 30px;
+  }
+}
